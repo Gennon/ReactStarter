@@ -1,12 +1,15 @@
+"use strict";
 var React = require('react');
+var ReactDOM = require('react-dom');
 
-var Hello = React.createClass({
-  render: function() {
-    return <h1 className="red">
+class Main extends React.Component{
+  render() {
+    return (
+    <h1 className="red">
       Hello!
     </h1>
+    )
   }
-});
+};
 
-var element = React.createElement(Hello, {});
-React.render(element, document.querySelector('.container'));
+ReactDOM.render(<Main />, document.querySelector('.container'));
