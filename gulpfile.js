@@ -3,7 +3,7 @@ var gutil = require('gulp-util');
 var source = require('vinyl-source-stream');
 var browserify = require('browserify');
 var watchify = require('watchify');
-var reactify = require('reactify');
+var babelify = require('babelify');
 var notifier = require('node-notifier');
 var server = require('gulp-server-livereload');
 var concat = require('gulp-concat');
@@ -29,18 +29,20 @@ var notify = function(error) {
     message += '\nOn Line: ' + error.lineNumber;
   }
 
-  notifier.notify({title: title, message: message});
+  gutil.log(title + " " + message);
+  notifier.notify({title: title, message: message, wait: true});
 };
 
 var bundler = watchify(browserify({
   entries: ['./src/app.jsx'],
-  transform: [reactify],
   extensions: ['.jsx'],
   debug: true,
   cache: {},
   packageCache: {},
   fullPaths: true
-}));
+  })
+  .transform('babelify', { presets: ['es2015', 'react']})
+);
 
 function bundle() {
   return bundler

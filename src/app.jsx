@@ -1,14 +1,16 @@
-"use strict";
-var React = require('react');
-var ReactDOM = require('react-dom');
+import React from 'react';
+import ReactDOM from 'react-dom';
+import Navigator from './components/navigator';
+import Content from './components/content';
 
 class Main extends React.Component{
   render() {
     return (
-    <h1 className="red">
-      Hello!
-    </h1>
-    )
+    <div>
+      <Navigator />      
+      <Content />
+    </div>
+    );
   }
 };
 

@@ -8,21 +8,25 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "browserify": "latest",
-    "gulp": "latest",
-    "gulp-concat": "latest",
-    "gulp-react": "latest",
-    "gulp-sass": "latest",
-    "gulp-server-livereload": "latest",
-    "gulp-util": "latest",
-    "gulp-watch": "latest",
-    "node-notifier": "latest",
-    "react": "latest",
-    "react-bootstrap": "^0.27.3",
-    "react-dom": "^0.14.2",
-    "reactify": "latest",
-    "vinyl-source-stream": "latest",
-    "watchify": "latest"
+   
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "babelify": "*",
+    "browserify": "*",    
+    "gulp": "*",
+    "gulp-concat": "*",
+    "gulp-react": "*",
+    "gulp-sass": "*",
+    "gulp-server-livereload": "*",
+    "gulp-util": "*",
+    "gulp-watch": "*",
+    "node-notifier": "*",
+    "react": "*",
+    "react-bootstrap": "*",
+    "react-dom": "*",
+    "vinyl-source-stream": "*",
+    "watchify": "*",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*"
+  }
 }
