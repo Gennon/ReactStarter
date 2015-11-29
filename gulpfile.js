@@ -41,7 +41,10 @@ var bundler = watchify(browserify({
   packageCache: {},
   fullPaths: true
   })
-  .transform('babelify', { presets: ['es2015', 'react']})
+  .transform('babelify', { 
+      presets: ['es2015', 'react'], 
+      plugins: ["syntax-class-properties", "transform-class-properties"]
+    })
 );
 
 function bundle() {

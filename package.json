@@ -7,12 +7,14 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {
-   
-  },
+  "dependencies": {},
   "devDependencies": {
+    "babel-plugin-syntax-class-properties": "^6.1.18",
+    "babel-plugin-transform-class-properties": "^6.2.2",
+    "babel-preset-es2015": "*",
+    "babel-preset-react": "*",
     "babelify": "*",
-    "browserify": "*",    
+    "browserify": "*",
     "gulp": "*",
     "gulp-concat": "*",
     "gulp-react": "*",
@@ -25,8 +27,6 @@
     "react-bootstrap": "*",
     "react-dom": "*",
     "vinyl-source-stream": "*",
-    "watchify": "*",
-    "babel-preset-es2015": "*",
-    "babel-preset-react": "*"
+    "watchify": "*"
   }
 }
